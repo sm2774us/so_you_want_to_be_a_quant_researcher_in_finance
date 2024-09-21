@@ -2,6 +2,8 @@
 
 This detailed breakdown of Day 1 will provide mathematical formulae, proofs, explanations, and code implementations in both Python 3 and C++20 using popular third-party libraries. The day will be split into fundamental sections with a focus on mathematical and statistical theory, code examples, and finally, questions and solutions to test understanding.
 
+<div align="right"><a href="../README.md" target="_blacnk"><img src="https://img.shields.io/badge/Back To Full Course-blue?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
+
 ---
 
 ### **1. Linear Algebra for Quantitative Finance**
@@ -9,43 +11,43 @@ This detailed breakdown of Day 1 will provide mathematical formulae, proofs, exp
 #### **Key Concepts and Mathematical Formulae**
 
 1. **Vectors and Matrices**:
-    - **Vector**: 
+- **Vector**:
 
 $$
 \mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}
 $$
 
-      Operations: dot product, cross product.
+  Operations: dot product, cross product.
 
-    - **Matrix multiplication**:
+- **Matrix multiplication**:
 
 $$
 C = AB, \text{ where } C_{ij} = \sum_{k} A_{ik} B_{kj}
 $$
 
-    - **Inverse of a matrix** $A^{-1}$:
+- **Inverse of a matrix** $A^{-1}$:
 
 $$
 A^{-1} A = I, \text{ where } I \text{ is the identity matrix.}
 $$
 
 2. **Eigenvalues and Eigenvectors**:
-    - Given a matrix $$A$$, an eigenvector $$\mathbf{v}$$ and its corresponding eigenvalue $$\lambda$$ satisfy:
+- Given a matrix $$A$$, an eigenvector $$\mathbf{v}$$ and its corresponding eigenvalue $$\lambda$$ satisfy:
 
 $$
 A \mathbf{v} = \lambda \mathbf{v}
 $$
 
-    - The eigenvalue decomposition of a matrix is $$A = V \Lambda V^{-1}$$, where $$V$$ contains the eigenvectors and $$\Lambda$$ contains the eigenvalues.
+- The eigenvalue decomposition of a matrix is $$A = V \Lambda V^{-1}$$, where $$V$$ contains the eigenvectors and $$\Lambda$$ contains the eigenvalues.
 
 3. **Singular Value Decomposition (SVD)**:
-    - Any matrix $$A$$ can be decomposed as:
+- Any matrix $$A$$ can be decomposed as:
 
 $$
 A = U \Sigma V^T
 $$
 
-      where $$U$$ and $$V$$ are orthogonal matrices, and $$\Sigma$$ is a diagonal matrix of singular values.
+where $$U$$ and $$V$$ are orthogonal matrices, and $$\Sigma$$ is a diagonal matrix of singular values.
 
 #### **Code Implementation: Eigenvalues & Eigenvectors**
 
@@ -97,7 +99,7 @@ $$
 \mathbb{E}[X] = \sum_{i} x_i P(x_i)
 $$
 
-   For continuous distributions:
+  For continuous distributions:
 
 $$
 \mathbb{E}[X] = \int_{-\infty}^{\infty} x f(x) \, dx
@@ -106,13 +108,14 @@ $$
    The expected value measures the central tendency or average of a random variable.
 
 2. **Variance and Standard Deviation**:
-    - **Variance**:
+- **Variance**:
 
-    $$
-    \text{Var}(X) = \mathbb{E}[(X - \mathbb{E}[X])^2]
-    $$
+$$
+\text{Var}(X) = \mathbb{E}[(X - \mathbb{E}[X])^2]
+$$
 
-    - **Standard Deviation**: $$\sigma(X) = \sqrt{\text{Var}(X)}$$
+- **Standard Deviation**:
+  $$\sigma(X) = \sqrt{\text{Var}(X)}$$
 
 3. **Covariance**:
 
@@ -120,16 +123,16 @@ $$
 \text{Cov}(X, Y) = \mathbb{E}[(X - \mathbb{E}[X])(Y - \mathbb{E}[Y])]
 $$
 
-   Covariance indicates how two random variables move together.
+  Covariance indicates how two random variables move together.
 
 4. **Normal Distribution**:
-    The probability density function (PDF) of a normal distribution is:
+The probability density function (PDF) of a normal distribution is:
 
 $$
 f(x) = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left(-\frac{(x - \mu)^2}{2\sigma^2}\right)
 $$
 
-   Used to model asset returns.
+Used to model asset returns.
 
 #### **Code Implementation: Normal Distribution & Statistics**
 
@@ -194,23 +197,23 @@ $$
 #### **Key Concepts and Mathematical Formulae**
 
 1. **Derivatives**:
-    - First derivative $$f'(x)$$ represents the rate of change of a function.
+- First derivative $$f'(x)$$ represents the rate of change of a function.
 
 $$
 f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
 $$
 
-    - Second derivative $$f''(x)$$ represents the curvature or concavity of the function.
+- Second derivative $$f''(x)$$ represents the curvature or concavity of the function.
 
 2. **Ito's Lemma**:
-    - In stochastic calculus, Ito’s Lemma is a fundamental result used to differentiate stochastic processes.
-    - If $$f(X_t)$$ is a function of a stochastic process $$X_t$$, then Ito's Lemma gives:
+- In stochastic calculus, Ito’s Lemma is a fundamental result used to differentiate stochastic processes.
+- If $$f(X_t)$$ is a function of a stochastic process $$X_t$$, then Ito's Lemma gives:
 
 $$
 df(X_t) = \frac{\partial f}{\partial t} dt + \frac{\partial f}{\partial X_t} dX_t + \frac{1}{2} \frac{\partial^2 f}{\partial X_t^2} (dX_t)^2
 $$
 
-    - This is used to derive the **Black-Scholes equation**.
+- This is used to derive the **Black-Scholes equation**.
 
 #### **Code Implementation: Differentiation**
 
@@ -238,23 +241,23 @@ $$
 #### **Key Concepts and Mathematical Formulae**
 
 1. **Autoregressive (AR) Model**:
-    - The AR(1) model is given by:
+- The AR(1) model is given by:
 
 $$
 X_t = \phi X_{t-1} + \epsilon_t
 $$
 
-    - $$\epsilon_t$$ is white noise with mean zero and variance $$\sigma^2$$.
+- $$\epsilon_t$$ is white noise with mean zero and variance $$\sigma^2$$.
   
 2. **Moving Average (MA) Model**:
-    - The MA(1) model:
+- The MA(1) model:
 
 $$
 X_t = \mu + \epsilon_t + \theta \epsilon_{t-1}
 $$
 
 3. **ARIMA**:
-    - The ARIMA model generalizes AR and MA by integrating the differencing term $$I$$:
+- The ARIMA model generalizes AR and MA by integrating the differencing term $$I$$:
 
 $$
 X_t = \phi_1 X_{t-1} + \dots + \phi_p X_{t-p} + \theta_1 \epsilon_{t-1} + \dots + \theta_q \epsilon_{t-q} + d
@@ -282,6 +285,8 @@ $$
 -party library (e.g., dlib or Eigen).
 
 ---
+
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
 ### **Questions and Solutions Section**
 
@@ -346,4 +351,6 @@ $$
     }
     ```
 
-This concludes Day 1, providing a solid foundation in the mathematics and statistics required for quantitative finance with practical examples in both Python 3 and C++20.
+This concludes Day 1, providing a solid foundation in the mathematics and statistics required for quantitative finance with practical examples in both __`Python 3`__ and __`C++20`__.
+
+<div align="right"><a href="../README.md" target="_blacnk"><img src="https://img.shields.io/badge/Back To Full Course-blue?style=for-the-badge&logo=expo&logoColor=white" /></a></div>

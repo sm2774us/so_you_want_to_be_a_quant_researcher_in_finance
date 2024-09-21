@@ -2,17 +2,19 @@
 
 Becoming a successful quantitative researcher in a multi-strategy buy-side hedge fund requires a deep and broad skill set, covering both technical and domain-specific knowledge. Although mastering all of these areas in a week is highly ambitious, I can help you create a structured, focused plan that covers the essentials of each topic. The goal is to expose you to the foundational concepts, so you can later dive deeper as needed.
 
-### **Week Plan Overview**
+### **Week Plan Overview** <a name="top"></a>
 
-1. **Day 1: Mathematics & Statistics**
-2. **Day 2: Trading Indicators & Market Knowledge**
-3. **Day 3: Machine Learning (ML) & Artificial Intelligence (AI)**
-4. **Day 4: Market Knowledge and Data Analysis**
-5. **Day 5: Portfolio Optimization & Risk Management**
-6. **Day 6: Compliance, Risk, and Regulations**
-7. **Day 7: Review, Testing, and Building Trading Strategies**
+1. [**Day 1: Mathematics & Statistics**](#day-1-mathematics--statistics)
+2. [**Day 2: Trading Indicators & Market Knowledge**](#day-2-trading-indicators--market-knowledge)
+3. [**Day 3: Machine Learning (ML) & Artificial Intelligence (AI)**](#day-3-machine-learning-ml--artificial-intelligence-ai)
+4. [**Day 4: Market Knowledge and Data Analysis**](#day-5-portfolio-optimization--risk-management)
+5. [**Day 5: Portfolio Optimization & Risk Management**](#day-5-portfolio-optimization--risk-management)
+6. [**Day 6: Compliance, Risk, and Regulations**](#day-6-compliance-risk-and-regulations)
+7. [**Day 7: Review, Testing, and Building Trading Strategies**](#day-7-review-testing-and-building-trading-strategies)
 
-### **Day 1: Mathematics & Statistics**
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
+
+### [**Day 1: Mathematics & Statistics**](./DAY_1/README.md)
 Mathematics and statistics are the backbone of quant research. You'll need a solid understanding of time series analysis, probability, calculus, linear algebra, and econometrics.
 
 - **Mathematical Tools for Quantitative Finance**:
@@ -26,6 +28,8 @@ Mathematics and statistics are the backbone of quant research. You'll need a sol
 - Use **NumPy** in Python and **Eigen** in C++ to practice matrix operations.
 - Implement simple time series analysis (e.g., ARIMA models) using Python libraries (`statsmodels`, `numpy`, `scipy`).
 - Code out basic financial indicators like Moving Averages (MA), Weighted Averages (WMA), and Exponential Moving Averages (EMA) using C++.
+
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
 ### **Day 2: Trading Indicators & Market Knowledge**
 Learn how to calculate key trading indicators and understand the behavior of different markets (equities, FX, options, interest rates).
@@ -45,6 +49,8 @@ Learn how to calculate key trading indicators and understand the behavior of dif
 - Implement VWAP, RSI, and Bollinger Bands in both Python (using `pandas`, `TA-Lib`) and C++ (`Boost`, `Eigen`).
 - Build a basic backtesting engine for these indicators using Python and C++.
 
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
+
 ### **Day 3: Machine Learning (ML) & Artificial Intelligence (AI)**
 ML and AI are becoming increasingly important in developing predictive models.
 
@@ -62,6 +68,8 @@ ML and AI are becoming increasingly important in developing predictive models.
 **Python & C++ Practice**:
 - Train a Random Forest model using Python’s `scikit-learn` on historical price data for stock prediction.
 - Implement a simple regression model using C++ with `Eigen` for predictive analytics.
+
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
 ### **Day 4: Market Knowledge and Data Analysis**
 This day will focus on understanding the intricacies of financial markets and performing real-time data analysis.
@@ -81,6 +89,8 @@ This day will focus on understanding the intricacies of financial markets and pe
 - Parse order book data in C++ and compute the state of the market using Boost ASIO.
 - Use Python to analyze FX tick data and perform exploratory analysis.
 
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
+
 ### **Day 5: Portfolio Optimization & Risk Management**
 Risk management and portfolio optimization are critical in multi-asset hedge fund strategies.
 
@@ -96,6 +106,8 @@ Risk management and portfolio optimization are critical in multi-asset hedge fun
 - Implement a portfolio optimization problem in Python using `cvxpy` and C++ using optimization libraries like `LBFGS`.
 - Code a basic VaR calculation using historical returns in both Python and C++.
 
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
+
 ### **Day 6: Compliance, Risk, and Regulations**
 Understand the legal and compliance framework, as well as regulations that hedge funds must follow.
 
@@ -107,6 +119,8 @@ Understand the legal and compliance framework, as well as regulations that hedge
 **Python & C++ Practice**:
 - Write Python code to handle regulatory compliance reporting based on daily P&L and market exposure.
 - Implement basic risk checks in your C++ trading system to ensure compliance.
+
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
 ### **Day 7: Review, Testing, and Building Trading Strategies**
 Use the final day to integrate and review the knowledge gained during the week.
@@ -125,7 +139,11 @@ Use the final day to integrate and review the knowledge gained during the week.
 
 ---
 
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
+
 ### **Post-Week Learning**:
 After this intense week, you should revisit specific topics that are most applicable to your role or areas of interest. Delve deeper into each domain, focusing on reading research papers, implementing more complex algorithms, and working with real-world data.
 
 With this plan, you'll have a foundational overview to become successful as a quantitative researcher and continue growing your skills.
+
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Proceed To Day 2-green?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
