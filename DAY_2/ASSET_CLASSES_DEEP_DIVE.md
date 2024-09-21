@@ -165,7 +165,7 @@ where $$S_t$$ is the spot price, $$r$$ is the risk-free rate, $$c$$ is the stora
 
 ---
 
-### **7. Derivatives (Futures, Swaps)**
+### ***7. Derivatives (Futures, Swaps)**
    - **Futures Contracts** are standardized contracts to buy/sell an asset at a future date.
    - **Swaps** involve the exchange of cash flows (e.g., fixed vs floating interest rate).
 
@@ -173,18 +173,255 @@ where $$S_t$$ is the spot price, $$r$$ is the risk-free rate, $$c$$ is the stora
    - **Pricing Futures**: Typically done using the **Cost of Carry Model**.
    - **Swap Pricing**: Involves discounting the fixed leg and the floating leg to present value.
 
+#### 7.1 **Futures Contracts**
+A **futures contract** is a standardized agreement to buy or sell a specific quantity of an asset at a predetermined price at a future date.
+
+##### **Mathematical Model: Cost of Carry Model**
+The **Cost of Carry** model is used to price futures contracts. It includes costs associated with holding the underlying asset until the delivery date of the futures contract.
+
+The formula for the **Futures Price** is:
+
+```math
+F = S e^{(r - d)T}
+```
+
+Where:
+- $$F$$ = Futures price
+- $$S$$ = Spot price (current price of the asset)
+- $$r$$ = Risk-free interest rate
+- $$d$$ = Dividend yield (if the underlying asset pays dividends)
+- $$T$$ = Time to maturity (in years)
+- $$e$$ = Euler’s number
+
+This formula assumes that the futures price will converge to the spot price at the time of contract expiration. It also accounts for **carrying costs** like financing costs (interest rates) and dividend payouts.
+
+##### **Example in Python**:
+Let’s calculate the futures price of a stock with a spot price of $100, a risk-free rate of 5%, and no dividend yield, for a contract that expires in 1 year.
+
+```python
+import math
+
+# Input parameters
+spot_price = 100  # current price
+risk_free_rate = 0.05  # 5% annual rate
+dividend_yield = 0  # no dividends
+time_to_maturity = 1  # 1 year
+
+# Cost of Carry Model Formula
+futures_price = spot_price * math.exp((risk_free_rate - dividend_yield) * time_to_maturity)
+
+print(f"Futures Price: {futures_price:.2f}")
+```
+
+##### **Example in C++**:
+```cpp
+#include <iostream>
+#include <cmath>
+
+int main() {
+    double spot_price = 100.0; // current price
+    double risk_free_rate = 0.05; // 5% annual rate
+    double dividend_yield = 0.0; // no dividends
+    double time_to_maturity = 1.0; // 1 year
+
+    // Cost of Carry Model Formula
+    double futures_price = spot_price * std::exp((risk_free_rate - dividend_yield) * time_to_maturity);
+
+    std::cout << "Futures Price: " << futures_price << std::endl;
+    return 0;
+}
+```
+
+---
+
+#### 7.2 **Swaps**
+
+A **swap** is a financial contract where two parties exchange cash flows over time. The most common type is an **interest rate swap**, where one party pays a fixed interest rate and the other pays a floating rate (e.g., linked to LIBOR).
+
+##### **Mathematical Model for Swap Pricing: Present Value of Cash Flows**
+The price of a swap is based on the present value of cash flows from both legs (fixed and floating). Swaps are typically structured to have zero net present value at inception, meaning the value of both legs is equal.
+
+For a **fixed leg**:
+
+```math
+PV_{\text{fixed}} = \sum_{i=1}^{n} \frac{C_{\text{fixed}}}{(1+r_i)^t}
+```
+
+Where:
+- $$C_{\text{fixed}}$$ = Fixed cash flow payment
+- $$r_i$$ = Discount rate (derived from yield curves)
+- $$t$$ = Time period for each payment
+
+For a **floating leg**:
+
+```math
+PV_{\text{floating}} = \sum_{i=1}^{n} \frac{C_{\text{floating}}}{(1+r_i)^t}
+```
+
+Where the floating cash flows change based on a reference rate, such as LIBOR.
+
+##### **Python Code for Swap Pricing (Simplified Fixed vs Floating Swap)**:
+```python
+import numpy as np
+
+# Input parameters
+fixed_rate = 0.03  # 3% fixed rate
+floating_rate = 0.025  # LIBOR or other index
+notional = 1000000  # $1,000,000 notional
+periods = 5  # 5 periods
+discount_rates = np.array([0.01, 0.012, 0.014, 0.015, 0.016])  # discount factors
+
+# Calculate present value of the fixed leg
+fixed_cash_flows = np.full(periods, fixed_rate * notional)
+pv_fixed = np.sum(fixed_cash_flows / (1 + discount_rates)**np.arange(1, periods + 1))
+
+# Calculate present value of the floating leg
+floating_cash_flows = np.full(periods, floating_rate * notional)
+pv_floating = np.sum(floating_cash_flows / (1 + discount_rates)**np.arange(1, periods + 1))
+
+# Swap value
+swap_value = pv_fixed - pv_floating
+print(f"Swap Value: {swap_value:.2f}")
+```
+
+##### **C++ Code for Swap Pricing (Simplified Fixed vs Floating Swap)**:
+```cpp
+#include <iostream>
+#include <cmath>
+#include <vector>
+
+int main() {
+    double fixed_rate = 0.03; // 3% fixed rate
+    double floating_rate = 0.025; // LIBOR or other index
+    double notional = 1000000; // $1,000,000 notional
+    int periods = 5;
+    std::vector<double> discount_rates = {0.01, 0.012, 0.014, 0.015, 0.016};
+
+    double pv_fixed = 0;
+    double pv_floating = 0;
+
+    // Calculate present value of the fixed leg
+    for (int i = 0; i < periods; i++) {
+        pv_fixed += (fixed_rate * notional) / std::pow(1 + discount_rates[i], i + 1);
+    }
+
+    // Calculate present value of the floating leg
+    for (int i = 0; i < periods; i++) {
+        pv_floating += (floating_rate * notional) / std::pow(1 + discount_rates[i], i + 1);
+    }
+
+    double swap_value = pv_fixed - pv_floating;
+    std::cout << "Swap Value: " << swap_value << std::endl;
+
+    return 0;
+}
+```
+
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
 ---
 
 ### **8. Crypto**
-   - **Crypto Assets** are digital and decentralized. Analysis of crypto involves blockchain data and price patterns.
+   - **Cryptocurrencies are** **digital assets** built on decentralized blockchain networks.
+   - Their price behavior is influenced by factors like market demand, blockchain events (forks), and adoption.
+   - Analysis of crypto involves blockchain data and price patterns.
    - **Mathematical Models**: Volatility in crypto is often modeled using GARCH and stochastic models similar to FX.
 
    #### **Statistical Tools**:
    - **Moving Average**: Used to smooth out price data.
    - **Volatility Metrics**: GARCH models to estimate volatility.
    - **Correlation Analysis**: To assess how crypto moves relative to other assets (e.g., stocks, commodities).
+
+
+
+#### **8.1 Volatility Modeling with GARCH**
+
+Since crypto markets are highly volatile, **Generalized Autoregressive Conditional Heteroskedasticity (GARCH)** models are often used to estimate volatility over time. The GARCH model allows volatility to change based on past squared returns and past volatility.
+
+**GARCH(1, 1) model**:
+
+```math
+\sigma_t^2 = \alpha_0 + \alpha_1 \epsilon_{t-1}^2 + \beta_1 \sigma_{t-1}^2
+```
+
+Where:
+- $$\sigma_t^2$$ = Conditional variance (volatility at time t)
+- $$\alpha_0, \alpha_1, \beta_1$$ = Model parameters
+- $$\epsilon_{t-1}$$ = Past return shock (error term)
+
+##### **Python Code: GARCH Model Using `arch` library**:
+```python
+import numpy as np
+import pandas as pd
+import yfinance as yf
+from arch import arch_model
+
+# Fetch historical data for Bitcoin
+data = yf.download('BTC-USD', start='2020-01-01', end='2023-01-01')
+returns = 100 * data['Close'].pct_change().dropna()
+
+# Fit GARCH(1, 1) model
+garch_model = arch_model(returns, vol='Garch', p=1, q=1)
+garch_fit = garch_model.fit()
+
+# Forecast future volatility
+volatility_forecast = garch_fit.forecast(horizon=5)
+print(volatility_forecast.variance[-1:])
+```
+
+##### **C++ Code for GARCH Model (Conceptual Example)**
+A GARCH model implementation in C++ requires specialized statistical libraries like `Boost`, but the basic flow of a GARCH model could be implemented using template meta-programming. For simplicity, this code does not run GARCH but illustrates a conceptual structure:
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <numeric>
+
+template<typename T>
+T garch_model(const std::vector<T>& returns, T alpha0, T alpha1, T beta1, int horizon) {
+    std::vector<T> variance(returns.size(), 0);
+    variance[0] = std::pow(returns[0], 2);
+
+    for (size_t i = 1; i < returns.size(); ++i) {
+        variance[i] = alpha0 + alpha1 * std::pow(returns[i - 1], 2) + beta1 * variance[i - 1];
+    }
+
+    T forecast = variance.back();
+    for (int i = 0; i < horizon; ++i) {
+        forecast = alpha0 + (alpha1 + beta1) * forecast;
+    }
+
+    return forecast;
+}
+
+int main() {
+
+
+    std::vector<double> returns = {0.02, -0.01, 0.015, -0.03}; // example returns
+    double alpha0 = 0.01, alpha1 = 0.1, beta1 = 0.85;
+    int horizon = 5;
+
+    double forecast = garch_model(returns, alpha0, alpha1, beta1, horizon);
+    std::cout << "Forecasted volatility: " << forecast << std::endl;
+    return 0;
+}
+```
+
+#### **8.2 Statistical Tools for Crypto**
+- **Moving Average**: Simple Moving Average (SMA) and Exponential Moving Average (EMA) smooth out price fluctuations.
+- **Volatility Metrics**: GARCH models are often used to estimate conditional volatility.
+- **Correlation Analysis**: Pearson or Spearman correlation is often used to assess relationships between crypto assets and traditional assets like equities or commodities.
+
+##### **Example: Correlation Matrix for Crypto and Stocks in Python**:
+```python
+assets = ['BTC-USD', 'SPY', 'GLD']  # Bitcoin, S&P500, Gold
+prices = yf.download(assets, start='2020-01-01')['Close'].pct_change().dropna()
+correlation_matrix = prices.corr()
+print(correlation_matrix)
+```
+
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
 ---
 
