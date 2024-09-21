@@ -28,8 +28,8 @@ A robust trading strategy typically includes:
 A simple yet effective strategy is the moving average crossover strategy, which signals buying and selling based on two moving averages.
 
 **Mathematical Concept**:
-- **Short Moving Average (SMA)**: Average of the last \( n \) prices.
-- **Long Moving Average (LMA)**: Average of the last \( m \) prices.
+- **Short Moving Average (SMA)**: Average of the last $$n$$ prices.
+- **Long Moving Average (LMA)**: Average of the last $$m$$ prices.
 
 **Trading Signal**:
 - **Buy Signal**: When SMA crosses above LMA.
