@@ -28,9 +28,9 @@ Machine Learning is about creating models that learn patterns from data. The goa
 Linear regression is one of the most basic yet powerful algorithms used in financial forecasting (e.g., predicting stock prices).
 
 **Mathematical Model**:
-$$
+```math
 y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_n x_n + \epsilon
-$$
+```
 Where:
 - $$y$$ is the predicted output (e.g., stock price).
 - $$x_1, x_2, \dots, x_n$$ are the features (e.g., past prices, market indicators).
@@ -39,9 +39,9 @@ Where:
 - $$\epsilon$$ is the error term (noise).
 
 **Gradient Descent Algorithm** (used for optimizing $$\beta$$):
-$$
+```math
 \beta_j := \beta_j - \alpha \frac{\partial}{\partial \beta_j} J(\beta)
-$$
+```
 Where $$J(\beta)$$ is the cost function (mean squared error), and $$\alpha$$ is the learning rate.
 
 **Python Code Example (with scikit-learn)**:
