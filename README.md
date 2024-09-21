@@ -146,4 +146,4 @@ After this intense week, you should revisit specific topics that are most applic
 
 With this plan, you'll have a foundational overview to become successful as a quantitative researcher and continue growing your skills.
 
-<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Proceed To Day 2-green?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>

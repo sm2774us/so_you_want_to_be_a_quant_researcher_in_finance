@@ -1,10 +1,20 @@
-### **Day 1: Mathematics & Statistics for Quantitative Finance (Detailed Breakdown)**
+# **Day 1: Mathematics & Statistics for Quantitative Finance (Detailed Breakdown)**
 
 This detailed breakdown of Day 1 will provide mathematical formulae, proofs, explanations, and code implementations in both Python 3 and C++20 using popular third-party libraries. The day will be split into fundamental sections with a focus on mathematical and statistical theory, code examples, and finally, questions and solutions to test understanding.
 
 <div align="right"><a href="../README.md" target="_blacnk"><img src="https://img.shields.io/badge/Back To Full Course-blue?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
 ---
+
+### **Day-1 Plan Overview** <a name="top"></a>
+
+1. [**1. Linear Algebra for Quantitative Finance**](#1-linear-algebra-for-quantitative-finance)
+2. [**2. Probability and Statistics**](#2-probability-and-statistics)
+3. [**3. Calculus and Stochastic Calculus**](#3-calculus-and-stochastic-calculus)
+4. [**4. Time Series Analysis**](#4-time-series-analysis)
+5. [**Questions and Solutions Section**](#questions-and-solutions-section)
+
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
 ### **1. Linear Algebra for Quantitative Finance**
 
@@ -88,6 +98,8 @@ where $$U$$ and $$V$$ are orthogonal matrices, and $$\Sigma$$ is a diagonal matr
     ```
 
 ---
+
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
 ### **2. Probability and Statistics**
 
@@ -192,6 +204,8 @@ Used to model asset returns.
 
 ---
 
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
+
 ### **3. Calculus and Stochastic Calculus**
 
 #### **Key Concepts and Mathematical Formulae**
@@ -217,7 +231,7 @@ $$
 
 #### **Code Implementation: Differentiation**
 
-- **Python (SymPy)**:
+- **Python (`SymPy`)**:
     ```python
     from sympy import symbols, diff
 
@@ -232,9 +246,91 @@ $$
     print(f"Delta: {delta}")
     ```
 
-- **C++20**: For differentiation, numerical methods can be implemented manually or using a library like AutoDiff.
+- **C++20**: For differentiation, numerical methods can be implemented manually or using a library like [__`SymEngine`__](https://symengine.org/symengine/index.html) or [__`AutoDiff`__](https://autodiff.github.io/).
+    ```cpp
+    #include <iostream>
+    #include <symengine/expression.h>
+    #include <symengine/symbol.h>
+    #include <symengine/diff.h>
+
+    int main() {
+        using namespace SymEngine;
+
+        // Define the variables
+        auto S = symbol("S");
+        auto t = symbol("t");
+        auto sigma = symbol("sigma");
+
+        // Option price formula
+        Expression option_price = S * sigma * t;
+
+        // Compute Delta (first derivative w.r.t. S)
+        Expression delta = diff(option_price, S);
+
+        std::cout << "Delta: " << delta << std::endl;
+
+        return 0;
+    }
+    ```
+
+#### **Code Implementation: Differentiation using AAD**
+
+- **Python (`autograd`)**:
+    ```python
+    import autograd.numpy as np
+    from autograd import grad
+
+    def option_price(S, t, sigma):
+        return S * sigma * t
+
+    # Compute Delta (first derivative w.r.t. S)
+    delta = grad(option_price, 0)  # 0 indicates differentiation w.r.t. the first argument (S)
+
+    # Example values
+    S_val = 100.0
+    t_val = 1.0
+    sigma_val = 0.2
+
+    print(f"Delta: {delta(S_val, t_val, sigma_val)}")
+    ```
+
+- **C++20 (`adept`)**:
+    ```cpp
+    #include <iostream>
+    #include <adept.h>
+
+    double option_price(const adept::adouble& S, const adept::adouble& t, const adept::adouble& sigma) {
+        return S * sigma * t;
+    }
+
+    int main() {
+        adept::Stack stack;
+
+        // Define the variables
+        adept::adouble S = 100.0;
+        adept::adouble t = 1.0;
+        adept::adouble sigma = 0.2;
+
+        // Start recording derivatives
+        stack.new_recording();
+
+        // Compute option price
+        adept::adouble price = option_price(S, t, sigma);
+
+        // Compute Delta (first derivative w.r.t. S)
+        price.set_gradient(1.0);
+        stack.reverse();
+        double delta = S.get_gradient();
+
+        std::cout << "Delta: " << delta << std::endl;
+
+        return 0;
+    }
+    ```
 
 ---
+
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
 ### **4. Time Series Analysis**
 
@@ -353,4 +449,4 @@ $$
 
 This concludes Day 1, providing a solid foundation in the mathematics and statistics required for quantitative finance with practical examples in both __`Python 3`__ and __`C++20`__.
 
-<div align="right"><a href="../README.md" target="_blacnk"><img src="https://img.shields.io/badge/Back To Full Course-blue?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
+<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Proceed To Day 2-green?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
