@@ -60,13 +60,13 @@ To dive deeper into the section on **Asset Classes**, let's provide a detailed e
    #### **Black-Scholes Model** (for European options):
 A famous model for pricing European options under certain assumptions (constant volatility, interest rate, no dividends):
 - **Formula** for a call option price $$C$$:
-$$
+```math
 C = S_0 \Phi(d_1) - K e^{-rT} \Phi(d_2)
-$$
+```
 where,
-$$
+```math
 d_1 = \frac{\ln\left(\frac{S_0}{K}\right) + (r + \frac{\sigma^2}{2})T}{\sigma \sqrt{T}}, \quad d_2 = d_1 - \sigma \sqrt{T}
-$$
+```
 - $$S_0$$: Current stock price
 - $$K$$: Strike price
 - $$T$$: Time to maturity
