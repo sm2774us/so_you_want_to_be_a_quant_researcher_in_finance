@@ -88,15 +88,15 @@ int main() {
 Logistic regression is used for binary classification (e.g., predicting if a stock will go up or down).
 
 **Mathematical Model**:
-$$
+```math
 P(y=1 | X) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 x_1 + \cdots + \beta_n x_n)}}
-$$
+```
 Where $$P(y=1)$$ is the probability of the positive class.
 
 **Loss Function** (Log-Loss):
-$$
+```math
 J(\beta) = - \frac{1}{m} \sum_{i=1}^{m} \left[ y_i \log(h_\beta(x_i)) + (1 - y_i) \log(1 - h_\beta(x_i)) \right]
-$$
+```
 
 **Python Code Example**:
 ```python
@@ -150,9 +150,9 @@ Used to group data points into clusters based on similarity (e.g., grouping stoc
 
 **Mathematical Objective**:
 Minimize within-cluster variance:
-$$
+```math
 \sum_{i=1}^{k} \sum_{x_j \in C_i} || x_j - \mu_i ||^2
-$$
+```
 Where $$\mu_i$$ is the centroid of cluster $$C_i$$.
 
 **Python Code Example**:
@@ -196,9 +196,9 @@ int main() {
 In financial trading, RL can be used to develop strategies by learning the optimal actions in various market states. **Q-Learning** is a popular model-free RL algorithm.
 
 **Bellman Equation**:
-$$
+```math
 Q(s_t, a_t) = r_t + \gamma \max_a Q(s_{t+1}, a)
-$$
+```
 Where:
 - $$Q(s_t, a_t)$$ is the value of taking action $$a_t$$ in state $$s_t$$.
 - $$r_t$$ is the reward at time $$t$$.
@@ -232,9 +232,9 @@ Continuing from where we left off on **Neural Networks (Deep Learning)** in the 
 A feedforward neural network is a fundamental architecture in deep learning, composed of layers that transform inputs into outputs through a series of weighted connections.
 
 **Mathematical Model**:
-$$
+```math
 a^{[l]} = g(W^{[l]} a^{[l-1]} + b^{[l]})
-$$
+```
 Where:
 - $$a^{[l]}$$ is the activation of layer $$l$$.
 - $$W^{[l]}$$ are the weights connecting layer $$l-1$$ to layer $$l$$.
@@ -308,22 +308,22 @@ int main() {
 
 #### **6.1 Common Metrics**
 - **Mean Absolute Error (MAE)**:
-$$
+```math
 MAE = \frac{1}{n} \sum_{i=1}^{n} |y_i - \hat{y}_i|
-$$
+```
 - **Root Mean Squared Error (RMSE)**:
-$$
+```math
 RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2}
-$$
+```
 - **Accuracy** (for classification):
-$$
+```math
 Accuracy = \frac{TP + TN}{TP + TN + FP + FN}
-$$
+```
 Where:
-- TP: True Positives
-- TN: True Negatives
-- FP: False Positives
-- FN: False Negatives
+- $$TP$$: True Positives
+- $$TN$$: True Negatives
+- $$FP$$: False Positives
+- $$FN$$: False Negatives
 
 **Python Code Example**:
 ```python
@@ -382,9 +382,9 @@ int main() {
 Time series analysis is crucial in finance for predicting future values based on past observations.
 
 - **ARIMA Model**:
-$$
+```math
 ARIMA(p, d, q): \text{Autoregressive Integrated Moving Average}
-$$
+```
 Where $$p$$ is the number of lag observations, $$d$$ is the degree of differencing, and $$q$$ is the size of the moving average window.
 
 **Python Code Example**:
@@ -418,11 +418,11 @@ Large Language Models (LLMs), such as ChatGPT and other transformer-based archit
 1. **Sentiment Analysis**:
    LLMs can analyze financial news, earnings reports, and social media posts to gauge market sentiment. This can provide insights into potential market movements based on public perception.
 
-   **Mathematical Framework**:
-   - Sentiment Score Calculation:
-   $$
-   \text{Sentiment Score} = \frac{\text{Positive Mentions} - \text{Negative Mentions}}{\text{Total Mentions}}
-   $$
+**Mathematical Framework**:
+- Sentiment Score Calculation:
+```math
+\text{Sentiment Score} = \frac{\text{Positive Mentions} - \text{Negative Mentions}}{\text{Total Mentions}}
+```
 
 2. **Event Detection**:
    Using LLMs to detect significant events (e.g., mergers, acquisitions, regulatory changes) from unstructured text sources can aid in forming timely trading strategies.
@@ -496,9 +496,9 @@ By integrating LLMs into your quantitative trading strategy toolkit, you can lev
 
 #### **Q2: Derive the formula for the mean squared error.**
 **A2:** The mean squared error (MSE) is derived from the average of the squared differences between predicted values and actual values:
-$$
+```math
 MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
-$$
+```
 
 #### **Q3: Implement a simple linear regression model in both Python and C++. What loss function do you use?**
 **A3:**
