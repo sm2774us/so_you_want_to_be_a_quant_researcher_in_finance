@@ -228,10 +228,7 @@ $$
 #### **3. Futures**
    - **Definition**: Financial contracts obligating the buyer to purchase an asset or the seller to sell an asset at a predetermined future date and price.
    - **Key Metrics**: Margin, Mark-to-Market (MTM), Leverage.
-   - **Formula**:
-     $$
-     \text{Leverage} = \frac{\text{Position Value}}{\text{Initial Margin Requirement}}
-     $$
+   - **Formula**: $$\text{Leverage} = \frac{\text{Position Value}}{\text{Initial Margin Requirement}}$$
 
 #### **4. Options**
    - **Definition**: Contracts that give the holder the right, but not the obligation, to buy (call) or sell (put) an asset at a specific price before a specific date.
