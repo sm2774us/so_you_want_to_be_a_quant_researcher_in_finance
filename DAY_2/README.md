@@ -236,10 +236,7 @@ $$
 #### **4. Options**
    - **Definition**: Contracts that give the holder the right, but not the obligation, to buy (call) or sell (put) an asset at a specific price before a specific date.
    - **Key Metrics**: Strike Price, Option Premium, Greeks (Delta, Gamma, Theta, Vega).
-   - **Formula**: **Delta**:
-     $$
-     \Delta = \frac{\partial V}{\partial S}
-     $$
+   - **Formula**: **Delta**: $$\Delta = \frac{\partial V}{\partial S}$$
      where $$V$$ is the option price and $$S$$ is the underlying asset price.
 
 #### **5. Interest Rates**
