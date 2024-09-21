@@ -11,30 +11,30 @@ On Day 5, we will explore portfolio optimization and risk management, covering k
 MPT, developed by Harry Markowitz, aims to construct an optimal portfolio that maximizes expected return for a given level of risk.
 
 - **Expected Return**:
-\[
+```math
 E(R_p) = \sum_{i=1}^{n} w_i E(R_i)
-\]
+```
 Where:
-- \(E(R_p)\): Expected return of the portfolio
-- \(w_i\): Weight of asset \(i\) in the portfolio
-- \(E(R_i)\): Expected return of asset \(i\)
+- $$E(R_p)$$: Expected return of the portfolio
+- $$w_i$$: Weight of asset $$i$$ in the portfolio
+- $$E(R_i)$$: Expected return of asset $$i$$
 
 - **Portfolio Variance**:
-\[
+```math
 \sigma^2_p = \sum_{i=1}^{n} w_i^2 \sigma^2_i + \sum_{i \neq j} w_i w_j \sigma_{ij}
-\]
+```
 Where:
-- \(\sigma^2_p\): Variance of the portfolio
-- \(\sigma^2_i\): Variance of asset \(i\)
-- \(\sigma_{ij}\): Covariance between assets \(i\) and \(j\)
+- $$\sigma^2_p$$: Variance of the portfolio
+- $$\sigma^2_i$$: Variance of asset $$i$$
+- $$\sigma_{ij}$$: Covariance between assets $$i$$ and $$j$$
 
 #### **1.2 Portfolio Optimization Problem**
 The objective is to maximize the Sharpe Ratio, defined as:
-\[
+```math
 \text{Sharpe Ratio} = \frac{E(R_p) - R_f}{\sigma_p}
-\]
+```
 Where:
-- \(R_f\): Risk-free rate
+- $$R_f$$: Risk-free rate
 
 **Python Code Example** (Using `numpy` and `scipy`):
 ```python
@@ -142,13 +142,13 @@ int main() {
 VaR quantifies the potential loss in value of a portfolio over a defined period for a given confidence interval.
 
 - **Parametric VaR**:
-\[
+```math
 \text{VaR}_{\alpha} = \mu - z_{\alpha} \sigma
-\]
+```
 Where:
-- \(\mu\): Mean return of the portfolio
-- \(\sigma\): Standard deviation of returns
-- \(z_{\alpha}\): z-score corresponding to the confidence level \(\alpha\)
+- $$\mu$$: Mean return of the portfolio
+- $$\sigma$$: Standard deviation of returns
+- $$z_{\alpha}$$: z-score corresponding to the confidence level $$\alpha$$
 
 **Python Code Example**:
 ```python
@@ -200,9 +200,9 @@ int main() {
 
 #### **Q2: How is the portfolio variance calculated?**
 **A2:** Portfolio variance is calculated as the weighted sum of the variances of individual assets and the covariances between them, using the formula:
-\[
+```math
 \sigma^2_p = \sum_{i=1}^{n} w_i^2 \sigma^2_i + \sum_{i \neq j} w_i w_j \sigma_{ij}
-\]
+```
 
 #### **Q3: Write a Python function to calculate VaR for a given return series.**
 **A3:**
