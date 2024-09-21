@@ -3,14 +3,15 @@
 On Day 2, the focus is on learning **trading indicators** and acquiring foundational **market knowledge** for various asset classes including **Equities**, **Foreign Exchange (FX)**, **Futures**, **Options**, and **Interest Rates**. The section will cover popular trading indicators, mathematical/statistical formulas, and practical implementation in both Python3 and C++20 using popular third-party libraries.
 
 <div align="right"><a href="../README.md" target="_blacnk"><img src="https://img.shields.io/badge/Back To Full Course-blue?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
+
 ---
 
 ### **Day-2 Plan Overview** <a name="top"></a>
 
 1. [**1. Moving Averages (MA)**](#1-moving-averages-ma)
 2. [**2. Relative Strength Index (RSI)**](#2-relative-strength-index-rsi)
-2. [**3. Bollinger Bands**](#3-bollinger-bands)
-3. [**4. Market Knowledge: Asset Classes**](#4-market-knowledge-asset-classes)
+3. [**3. Bollinger Bands**](#3-bollinger-bands)
+4. [**4. Market Knowledge: Asset Classes**](#4-market-knowledge-asset-classes)
 5. [**Questions and Solutions Section**](#questions-and-solutions-section)
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
