@@ -86,12 +86,13 @@ d_1 = \frac{\ln\left(\frac{S_0}{K}\right) + (r + \frac{\sigma^2}{2})T}{\sigma \s
    - **Fixed Income Securities** are debt instruments that pay a fixed return over time. Pricing and yield calculations are crucial here.
    
    #### **Bond Pricing**:
-   - Bond prices are calculated by discounting future cash flows (coupons and face value) to the present.
-   - **Price of Bond**:
+- Bond prices are calculated by discounting future cash flows (coupons and face value) to the present.
+- **Price of Bond**:
 ```math
 P = \sum \frac{C}{(1 + r)^t} + \frac{F}{(1 + r)^T}
 ```
-     where $$C$$ is the coupon payment, $$F$$ is the face value, $$r$$ is the discount rate, and $$t$$ is time to payment.
+
+where $$C$$ is the coupon payment, $$F$$ is the face value, $$r$$ is the discount rate, and $$t$$ is time to payment.
 
    #### **Duration and Convexity**:
 - **Duration** measures sensitivity to interest rate changes:
