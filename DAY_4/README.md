@@ -10,14 +10,14 @@ On Day 4, we will deepen our understanding of market knowledge and data analysis
 #### **1.1 Equities**
 Equities represent ownership in a company. Key metrics include:
 - **Price-to-Earnings (P/E) Ratio**:
-\[
+```math
 \text{P/E} = \frac{\text{Market Price per Share}}{\text{Earnings per Share}}
-\]
+```
 
 - **Dividend Yield**:
-\[
+```math
 \text{Dividend Yield} = \frac{\text{Annual Dividends per Share}}{\text{Market Price per Share}}
-\]
+```
 
 #### **1.2 Forex (FX)**
 Forex trading involves currency pairs. Key metrics:
@@ -27,18 +27,18 @@ Forex trading involves currency pairs. Key metrics:
 #### **1.3 Options**
 Options give the right, but not the obligation, to buy/sell an asset at a predetermined price.
 - **Black-Scholes Model**:
-\[
+```math
 C = S_0 N(d_1) - X e^{-rT} N(d_2)
-\]
+```
 Where:
-- \( C \): Call option price
-- \( S_0 \): Current stock price
-- \( X \): Strike price
-- \( r \): Risk-free interest rate
-- \( T \): Time to expiration
-- \( N(d) \): Cumulative distribution function of the standard normal distribution
-- \( d_1 = \frac{\ln(S_0/X) + (r + \sigma^2/2)T}{\sigma \sqrt{T}} \)
-- \( d_2 = d_1 - \sigma \sqrt{T} \)
+- $$C$$: Call option price
+- $$S_0$$: Current stock price
+- $$X$$: Strike price
+- $$r$$: Risk-free interest rate
+- $$T$$: Time to expiration
+- $$N(d)$$: Cumulative distribution function of the standard normal distribution
+- $$d_1 = \frac{\ln(S_0/X) + (r + \sigma^2/2)T}{\sigma \sqrt{T}}$$
+- $$d_2 = d_1 - \sigma \sqrt{T}$$
 
 #### **1.4 Futures and Commodities**
 Futures contracts obligate the buyer to purchase an asset at a predetermined price at a specified time in the future.
@@ -189,13 +189,13 @@ int main() {
 
 #### **5.1 Descriptive Statistics**
 - **Mean**:
-\[
+```math
 \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
-\]
+```
 - **Standard Deviation**:
-\[
+```math
 \sigma = \sqrt{\frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2}
-\]
+```
 
 **Python Code Example**:
 ```python
@@ -240,9 +240,9 @@ int main() {
 
 #### **Q1: What is the purpose of the P/E ratio, and how is it calculated?**
 **A1:** The P/E ratio measures a company's current share price relative to its per-share earnings. It is calculated as:
-\[
+```math
 \text{P/E} = \frac{\text{Market Price per Share}}{\text{Earnings per Share}}
-\]
+```
 
 #### **Q2: How do you handle missing values in a dataset?**
 **A2:** Missing values can be handled by removing them, filling them with mean/median values, or using forward/backward filling.
