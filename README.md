@@ -7,7 +7,7 @@ Becoming a successful quantitative researcher in a multi-strategy buy-side hedge
 1. [**Day 1: Mathematics & Statistics**](#day-1-mathematics--statistics)
 2. [**Day 2: Trading Indicators & Market Knowledge**](#day-2-trading-indicators--market-knowledge)
 3. [**Day 3: Machine Learning (ML) & Artificial Intelligence (AI)**](#day-3-machine-learning-ml--artificial-intelligence-ai)
-4. [**Day 4: Market Knowledge and Data Analysis**](#day-5-portfolio-optimization--risk-management)
+4. [**Day 4: Market Knowledge and Data Analysis**](#day-4-market-knowledge-and-data-analysis)
 5. [**Day 5: Portfolio Optimization & Risk Management**](#day-5-portfolio-optimization--risk-management)
 6. [**Day 6: Compliance, Risk, and Regulations**](#day-6-compliance-risk-and-regulations)
 7. [**Day 7: Review, Testing, and Building Trading Strategies**](#day-7-review-testing-and-building-trading-strategies)
