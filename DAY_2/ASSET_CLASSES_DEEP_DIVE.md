@@ -139,11 +139,11 @@ where $$r_t$$ is the short rate, $$\kappa$$ is the speed of mean reversion, $$\t
    - **Backwardation**: When the futures price is lower than the spot price.
 
    #### **Pricing Models**:
-   - **Futures Pricing Formula**:
+- **Futures Pricing Formula**:
 ```math
 F_t = S_t e^{(r + c)T}
 ```
-     where $$S_t$$ is the spot price, $$r$$ is the risk-free rate, $$c$$ is the storage cost, and $$T$$ is the time to maturity.
+where $$S_t$$ is the spot price, $$r$$ is the risk-free rate, $$c$$ is the storage cost, and $$T$$ is the time to maturity.
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
