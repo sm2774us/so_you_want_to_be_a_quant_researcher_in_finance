@@ -28,13 +28,13 @@ On Day 6, we will explore compliance, risk, and regulations in the financial ind
 VaR is often used in compliance to ensure firms hold enough capital against potential losses.
 
 - **Parametric VaR Formula**:
-\[
+```math
 \text{VaR}_{\alpha} = \mu - z_{\alpha} \sigma
-\]
+```
 Where:
-- \(\mu\): Mean return
-- \(\sigma\): Standard deviation
-- \(z_{\alpha}\): z-score corresponding to confidence level \(\alpha\)
+- $$\mu$$: Mean return
+- $$\sigma$$: Standard deviation
+- $$z_{\alpha}$$: z-score corresponding to confidence level $$\alpha$$
 
 **Python Code Example** (Calculating VaR):
 ```python
