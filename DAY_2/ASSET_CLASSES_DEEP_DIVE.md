@@ -88,20 +88,20 @@ d_1 = \frac{\ln\left(\frac{S_0}{K}\right) + (r + \frac{\sigma^2}{2})T}{\sigma \s
    #### **Bond Pricing**:
    - Bond prices are calculated by discounting future cash flows (coupons and face value) to the present.
    - **Price of Bond**:
-     $$
-     P = \sum \frac{C}{(1 + r)^t} + \frac{F}{(1 + r)^T}
-     $$
+```math
+P = \sum \frac{C}{(1 + r)^t} + \frac{F}{(1 + r)^T}
+```
      where $$C$$ is the coupon payment, $$F$$ is the face value, $$r$$ is the discount rate, and $$t$$ is time to payment.
 
    #### **Duration and Convexity**:
-   - **Duration** measures sensitivity to interest rate changes:
-     $$
-     D = \frac{1}{P} \sum \frac{t \cdot C}{(1 + r)^t}
-     $$
-   - **Convexity** accounts for the curvature in price/yield relationship:
-     $$
-     C = \frac{1}{P} \sum \frac{t(t+1) \cdot C}{(1 + r)^{t+2}}
-     $$
+- **Duration** measures sensitivity to interest rate changes:
+```math
+D = \frac{1}{P} \sum \frac{t \cdot C}{(1 + r)^t}
+```
+- **Convexity** accounts for the curvature in price/yield relationship:
+```math
+C = \frac{1}{P} \sum \frac{t(t+1) \cdot C}{(1 + r)^{t+2}}
+```
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
@@ -116,15 +116,15 @@ d_1 = \frac{\ln\left(\frac{S_0}{K}\right) + (r + \frac{\sigma^2}{2})T}{\sigma \s
    - **Forward Rates**: Future interest rates implied by the yield curve.
 
    #### **Mathematical Models**:
-   - **Nelson-Siegel Model**: A parametric model to estimate the yield curve:
-     $$
+- **Nelson-Siegel Model**: A parametric model to estimate the yield curve:
+```math
      y(t) = \beta_0 + \beta_1 \frac{1 - e^{-\frac{t}{\tau}}}{\frac{t}{\tau}} + \beta_2 \left( \frac{1 - e^{-\frac{t}{\tau}}}{\frac{t}{\tau}} - e^{-\frac{t}{\tau}} \right)
-     $$
-   - **Cox-Ingersoll-Ross (CIR) Model**: A mean-reverting stochastic process for modeling interest rate dynamics:
-     $$
-     dr_t = \kappa (\theta - r_t) dt + \sigma \sqrt{r_t} dW_t
-     $$
-     where $$r_t$$ is the short rate, $$\kappa$$ is the speed of mean reversion, $$\theta$$ is the long-term mean, and $$W_t$$ is a Wiener process.
+```
+- **Cox-Ingersoll-Ross (CIR) Model**: A mean-reverting stochastic process for modeling interest rate dynamics:
+```math
+dr_t = \kappa (\theta - r_t) dt + \sigma \sqrt{r_t} dW_t
+```
+where $$r_t$$ is the short rate, $$\kappa$$ is the speed of mean reversion, $$\theta$$ is the long-term mean, and $$W_t$$ is a Wiener process.
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
@@ -139,9 +139,9 @@ d_1 = \frac{\ln\left(\frac{S_0}{K}\right) + (r + \frac{\sigma^2}{2})T}{\sigma \s
 
    #### **Pricing Models**:
    - **Futures Pricing Formula**:
-     $$
-     F_t = S_t e^{(r + c)T}
-     $$
+```math
+F_t = S_t e^{(r + c)T}
+```
      where $$S_t$$ is the spot price, $$r$$ is the risk-free rate, $$c$$ is the storage cost, and $$T$$ is the time to maturity.
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
@@ -152,13 +152,13 @@ d_1 = \frac{\ln\left(\frac{S_0}{K}\right) + (r + \frac{\sigma^2}{2})T}{\sigma \s
    - **FX Markets** are the largest and most liquid in the world. Pricing involves exchange rates between different currencies.
 
    #### **Mathematical Models**:
-   - **Covered Interest Rate Parity**: Ensures there’s no arbitrage between different currencies:
-     $$
-     \frac{F_{t}}{S_{t}} = \frac{1 + r_d}{1 + r_f}
-     $$
-     where $$F_t$$ is the forward rate, $$S_t$$ is the spot rate, $$r_d$$ and $$r_f$$ are the domestic and foreign interest rates respectively.
-   - **Uncovered Interest Rate Parity**: Relates interest rate differentials to expected changes in exchange rates.
-   - **GARCH Models**: Used to model volatility in FX markets.
+- **Covered Interest Rate Parity**: Ensures there’s no arbitrage between different currencies:
+```math
+\frac{F_{t}}{S_{t}} = \frac{1 + r_d}{1 + r_f}
+```
+  where $$F_t$$ is the forward rate, $$S_t$$ is the spot rate, $$r_d$$ and $$r_f$$ are the domestic and foreign interest rates respectively.
+- **Uncovered Interest Rate Parity**: Relates interest rate differentials to expected changes in exchange rates.
+- **GARCH Models**: Used to model volatility in FX markets.
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
