@@ -243,9 +243,9 @@ Where:
 
 **Loss Function**:
 For regression problems, the mean squared error (MSE) is commonly used:
-$$
+```math
 L(y, \hat{y}) = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2
-$$
+```
 
 **Python Code Example** (Using TensorFlow):
 ```python
