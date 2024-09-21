@@ -11,6 +11,7 @@ Becoming a successful quantitative researcher in a multi-strategy buy-side hedge
 5. [**Day 5: Portfolio Optimization & Risk Management**](#day-5-portfolio-optimization--risk-management)
 6. [**Day 6: Compliance, Risk, and Regulations**](#day-6-compliance-risk-and-regulations)
 7. [**Day 7: Review, Testing, and Building Trading Strategies**](#day-7-review-testing-and-building-trading-strategies)
+8. [**Real Life Project**](./REAL_LIFE_PROJECT.md)
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
