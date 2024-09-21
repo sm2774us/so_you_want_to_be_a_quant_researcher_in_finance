@@ -212,10 +212,13 @@ where $$RS = \frac{\text{Average Gain}}{\text{Average Loss}}$$ over a given peri
 - **Key Metrics**: Price-to-Earnings (P/E) ratio, Dividend Yield.
 - **Formulae**:
   - **Dividend Yield**: 
+    
     $$
     \text{Dividend Yield} = \frac{\text{Annual Dividend}}{\text{Stock Price}}
     $$
+
   - **P/E Ratio**:
+  
     $$
     \text{P/E Ratio} = \frac{\text{Stock Price}}{\text{Earnings per Share}}
     $$
