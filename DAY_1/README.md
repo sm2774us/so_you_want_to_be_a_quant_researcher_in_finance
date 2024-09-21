@@ -492,4 +492,4 @@ $$
 
 This concludes Day 1, providing a solid foundation in the mathematics and statistics required for quantitative finance with practical examples in both __`Python 3`__ and __`C++20`__.
 
-<div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Proceed To Day 2-green?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
+<div align="right"><a href="../DAY_2/README.md" target="_blacnk"><img src="https://img.shields.io/badge/Proceed To Day 2-green?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
