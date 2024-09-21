@@ -217,7 +217,10 @@ where $$RS = \frac{\text{Average Gain}}{\text{Average Loss}}$$ over a given peri
 #### **2. Foreign Exchange (FX)**
 - **Definition**: The global market for trading currencies.
 - **Key Metrics**: Exchange rate, Pips, Spread.
-- **Formula**: The exchange rate is expressed as: $$\text{Rate}_{\text{USD/EUR}} = \frac{1}{\text{Rate}_{\text{EUR/USD}}}$$
+- **Formula**: The exchange rate is expressed as:
+```math
+\text{Rate}_{\text{USD/EUR}} = \frac{1}{\text{Rate}_{\text{EUR/USD}}}
+```
 
 #### **3. Futures**
    - **Definition**: Financial contracts obligating the buyer to purchase an asset or the seller to sell an asset at a predetermined future date and price.
