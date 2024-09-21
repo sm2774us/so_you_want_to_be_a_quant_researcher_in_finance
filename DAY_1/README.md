@@ -235,7 +235,7 @@ There are 3 popular methods to calculate the derivative:
 1. [__Numerical differentiation__](#numerical-differentiation)
 2. [__Symbolic differentiation__](#symbolic-differentiation)
 3. [__Automatic differentiation__](#automatic-differentiation)
-4. [__Automatic Adjoint Differentiation (AAD)__](#__a__utomatic-__a__djoint-__d__ifferentiation-aad-1)
+4. [__Automatic Adjoint Differentiation (AAD)__](#__a__utomatic-__a__djoint-__d__ifferentiation-aad)
  
 ##### [Numerical differentiation](https://en.wikipedia.org/wiki/Numerical_differentiation)
 __Numerical differentiation__ relies on the definition of the derivative:
