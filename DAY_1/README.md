@@ -229,6 +229,50 @@ $$
 
 - This is used to derive the **Black-Scholes equation**.
 
+#### **Solving Differential Equations Programatically**
+There are 3 popular methods to calculate the derivative:
+
+1. [__Numerical differentiation__](#numerical-differentiation)
+2. [__Symbolic differentiation__](#symbolic-differentiation)
+3. [__Automatic differentiation__](#automatic-differentiation)
+ ##### __A__utomatic __A__djoint __D__ifferentiation (__AAD__)
+4. [__Automatic Adjoint Differentiation (AAD)__](#automatic-adjoint-differentiation) 
+ 
+##### [Numerical differentiation](https://en.wikipedia.org/wiki/Numerical_differentiation)
+__Numerical differentiation__ relies on the definition of the derivative:
+
+![Numerical differentiation](https://i.sstatic.net/ZUwpC.png)
+
+where you put a very small h and evaluate function in two places. This is the most basic formula and on practice people use other formulas which give smaller estimation error. This way of calculating a derivative is suitable mostly if you do not know your function and can only sample it. Also it requires a lot of computation for a high-dim function.
+
+##### [Symbolic differentiation](https://en.wikipedia.org/wiki/Symbolic_computation)
+__Symbolic differentiation__ manipulates mathematical expressions. If you ever used matlab or mathematica, then you saw [something like this](https://www.wolframalpha.com/input/?i=derivative%20%20x%5E2*cos(x-7)%2F(sin(x))) 
+
+![Symbolic differentiation](https://i.sstatic.net/XZgZL.png)
+
+Here for every math expression they know the derivative and use various rules (product rule, chain rule) to calculate the resulting derivative. Then they simplify the end expression to obtain the resulting expression.
+
+##### [Automatic differentiation](https://en.wikipedia.org/wiki/Automatic_differentiation)
+__Automatic differentiation__ manipulates blocks of computer programs. A differentiator has the rules for taking the derivative of each element of a program (when you define any op in core TF, you need to [register a gradient](https://www.tensorflow.org/extend/adding_an_op#implement_the_gradient_in_python) for this op). It also uses chain rule to break complex expressions into simpler ones. Here is a [good example how it works in real TF programs with some explanation](https://stackoverflow.com/q/44342432/1090562).
+
+You might think that Automatic differentiation is the same as Symbolic differentiation (in one place they operate on math expression, in another on computer programs). And yes, they are sometimes very similar. But for control flow statements (`if, while, loops) the results can be very [different](https://en.wikipedia.org/wiki/Automatic_differentiation):
+
+> symbolic differentiation leads to inefficient code (unless carefully done) and faces the difficulty of converting a computer program into a single expression
+>
+
+##### __A__utomatic __A__djoint __D__ifferentiation (__AAD__)
+Introduced to finance by the ground breaking _Smoking Adjoints_ (Giles and Glasserman, Risk 2006), AAD is a game changing technology allowing to compute differentials of arbitrary computations, automatically, with analytic precision, and for a computation cost of around 2 to 5 times one evaluation, depending on implementation, and _independently on the dimension of the gradient_.
+
+AAD arguably constitutes the most significant progress in computational finance of the past 20 years. It gave us real-time risk reports for complex Derivatives trading books and regulations like XVA, as well as instantaneous calibrations. It made differentials massively available for research and development in finance. Quoting the conclusion of our Wilmott piece _Computation graphs for AAD and Machine Learning parts 1, 2 and 3_ (Savine, Wilmott Magazine, 2019-2020):
+
+_New implementations of AAD are pushing the limits of its efficiency, while quantitative analysts are leveraging them in unexpected ways, besides the evident application to risk sensitivities or calibration._
+
+To a large extent, differential machine learning is another strong application of AAD. It is AAD that gave us the massive number of accurate differentials necessary to implement it, for a very cheap computation cost, and is ultimately responsible for the spectacular performance improvement. The real-world examples in the Risk paper, sections 3.2 and 3.3, were trained on AAD differential labels.
+
+The working paper or the complements do not cover AAD. Readers are referred to the (stellar) founding paper. [This textbook](https://www.amazon.com/Modern-Computational-Finance-Parallel-Simulations-dp-1119539455/dp/1119539455) provides a complete, up to date overview of AAD, its applications in finance, and a complete, professional implementation in modern C++.
+
+The [video tutorial](https://towardsdatascience.com/automatic-differentiation-15min-video-tutorial-with-application-in-machine-learning-and-finance-333e18c0ecbb) introduces the core ideas in 15 minutes.
+
 #### **Code Implementation: Differentiation**
 
 - **Python (`SymPy`)**:
