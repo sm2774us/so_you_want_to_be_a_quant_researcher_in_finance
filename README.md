@@ -1,0 +1,1 @@
+# so_you_want_to_be_a_quant_researcher_in_finance
