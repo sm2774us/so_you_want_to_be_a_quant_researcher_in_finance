@@ -8,10 +8,10 @@ This detailed breakdown of Day 1 will provide mathematical formulae, proofs, exp
 
 ### **Day-1 Plan Overview** <a name="top"></a>
 
-1. [**1. Linear Algebra for Quantitative Finance**](#1-linear-algebra-for-quantitative-finance)
-2. [**2. Probability and Statistics**](#2-probability-and-statistics)
-3. [**3. Calculus and Stochastic Calculus**](#3-calculus-and-stochastic-calculus)
-4. [**4. Time Series Analysis**](#4-time-series-analysis)
+1. [**Linear Algebra for Quantitative Finance**](#1-linear-algebra-for-quantitative-finance)
+2. [**Probability and Statistics**](#2-probability-and-statistics)
+3. [**Calculus and Stochastic Calculus**](#3-calculus-and-stochastic-calculus)
+4. [**Time Series Analysis**](#4-time-series-analysis)
 5. [**Questions and Solutions Section**](#questions-and-solutions-section)
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
