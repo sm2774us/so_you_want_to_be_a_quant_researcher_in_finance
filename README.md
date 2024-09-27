@@ -32,7 +32,7 @@ Mathematics and statistics are the backbone of quant research. You'll need a sol
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
-### **Day 2: Trading Indicators & Market Knowledge**
+### [**Day 2: Trading Indicators & Market Knowledge**](./DAY_2/README.md)
 Learn how to calculate key trading indicators and understand the behavior of different markets (equities, FX, options, interest rates).
 
 - **Trading Indicators**:
@@ -52,7 +52,7 @@ Learn how to calculate key trading indicators and understand the behavior of dif
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
-### **Day 3: Machine Learning (ML) & Artificial Intelligence (AI)**
+### [**Day 3: Machine Learning (ML) & Artificial Intelligence (AI)**](./DAY_3/README.md)
 ML and AI are becoming increasingly important in developing predictive models.
 
 - **ML Basics**:
@@ -72,7 +72,7 @@ ML and AI are becoming increasingly important in developing predictive models.
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
-### **Day 4: Market Knowledge and Data Analysis**
+### [**Day 4: Market Knowledge and Data Analysis**](./DAY_4/README.md)
 This day will focus on understanding the intricacies of financial markets and performing real-time data analysis.
 
 - **Order Book Analysis**:
@@ -92,7 +92,7 @@ This day will focus on understanding the intricacies of financial markets and pe
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
-### **Day 5: Portfolio Optimization & Risk Management**
+### [**Day 5: Portfolio Optimization & Risk Management**](./DAY_5/README.md)
 Risk management and portfolio optimization are critical in multi-asset hedge fund strategies.
 
 - **Portfolio Theory**:
@@ -109,7 +109,7 @@ Risk management and portfolio optimization are critical in multi-asset hedge fun
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
-### **Day 6: Compliance, Risk, and Regulations**
+### [**Day 6: Compliance, Risk, and Regulations**](./DAY_6/README.md)
 Understand the legal and compliance framework, as well as regulations that hedge funds must follow.
 
 - **Regulatory Framework**:
@@ -123,7 +123,7 @@ Understand the legal and compliance framework, as well as regulations that hedge
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
 
-### **Day 7: Review, Testing, and Building Trading Strategies**
+### [**Day 7: Review, Testing, and Building Trading Strategies**](./DAY_7/README.md)
 Use the final day to integrate and review the knowledge gained during the week.
 
 - **Backtesting Framework**:
