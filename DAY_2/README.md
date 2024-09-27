@@ -8,10 +8,10 @@ On Day 2, the focus is on learning **trading indicators** and acquiring foundati
 
 ### **Day-2 Plan Overview** <a name="top"></a>
 
-1. [**1. Moving Averages (MA)**](#1-moving-averages-ma)
-2. [**2. Relative Strength Index (RSI)**](#2-relative-strength-index-rsi)
-3. [**3. Bollinger Bands**](#3-bollinger-bands)
-4. [**4. Market Knowledge: Asset Classes**](#4-market-knowledge-asset-classes)
+1. [**Moving Averages (MA)**](#1-moving-averages-ma)
+2. [**Relative Strength Index (RSI)**](#2-relative-strength-index-rsi)
+3. [**Bollinger Bands**](#3-bollinger-bands)
+4. [**Market Knowledge: Asset Classes**](#4-market-knowledge-asset-classes)
 5. [**Questions and Solutions Section**](#questions-and-solutions-section)
 
 <div align="right"><a href="#top" target="_blacnk"><img src="https://img.shields.io/badge/Back To Top-orange?style=for-the-badge&logo=expo&logoColor=white" /></a></div>
