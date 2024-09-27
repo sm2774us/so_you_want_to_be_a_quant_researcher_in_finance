@@ -24,7 +24,11 @@ This detailed breakdown of Day 1 will provide mathematical formulae, proofs, exp
 - **Vector**:
 
 $$
-\mathbf{v} = \begin{bmatrix} v_1 \\ v_2 \\ \vdots \\ v_n \end{bmatrix}
+\mathbf{v} = \begin{bmatrix}v_1 \\
+             v_2 \\
+             \vdots \\
+             v_n 
+             \end{bmatrix}
 $$
 
   Operations: dot product, cross product.
